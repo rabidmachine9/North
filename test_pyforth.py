@@ -1,5 +1,5 @@
 import unittest
-from pforth import ForthInterpreter  # Assuming the interpreter is in pif.py
+from pyforth import ForthInterpreter  # Assuming the interpreter is in pif.py
 
 class TestForthInterpreter(unittest.TestCase):
 
