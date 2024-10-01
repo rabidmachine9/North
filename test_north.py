@@ -1,11 +1,11 @@
 import unittest
-from pyforth import ForthInterpreter  # Assuming the interpreter is in pif.py
+from north import NorthInterpreter  # Assuming the interpreter is in pif.py
 
 class TestForthInterpreter(unittest.TestCase):
 
     def setUp(self):
         """Set up a new interpreter instance before each test."""
-        self.interpreter = ForthInterpreter()
+        self.interpreter = NorthInterpreter()
 
     def test_addition(self):
         program = "5 10 +"

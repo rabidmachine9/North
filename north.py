@@ -1,4 +1,4 @@
-class ForthInterpreter:
+class NorthInterpreter:
     def __init__(self):
         self.stack = []
         self.variables = {}  # Dictionary for variable storage

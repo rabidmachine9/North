@@ -1,25 +1,25 @@
 import sys
-from pyforth import ForthInterpreter
+from north import NorthInterpreter
 
 def main():
-    print("Welcome to PyForth REPL")
-    interpreter = ForthInterpreter()  # Initialize your interpreter here
+    print("Welcome to North REPL")
+    interpreter = NorthInterpreter()  # Initialize your interpreter here
     while True:
         try:
-            user_input = input("forth> ")
+            user_input = input("North> ")
             if user_input.lower() in ["exit", "quit"]:
                 break
             result = interpreter.run(user_input)
             print(result)
         except (KeyboardInterrupt, EOFError):
-            print("\nExiting PyForth REPL.")
+            print("\nExiting North REPL.")
             break
 
 
 def start_repl():
-    """Start the Forth REPL."""
-    interpreter = ForthInterpreter()
-    print("Forth Interpreter REPL")
+    """Start the North REPL."""
+    interpreter = NorthInterpreter()
+    print("North Interpreter REPL")
     print("Type 'exit' or Ctrl+C to quit")
     
     while True:
@@ -46,8 +46,8 @@ def start_repl():
             print(f"Error: {e}")
 
 def run_file(file_path):
-    """Run a Forth script from a file."""
-    interpreter = ForthInterpreter()
+    """Run a North script from a file."""
+    interpreter = NorthInterpreter()
     
     try:
         with open(file_path, 'r') as f:
@@ -72,8 +72,8 @@ def main():
         run_file(file_path)
     else:
         print("Usage:")
-        print("  forth           # Start the REPL")
-        print("  forth <file>    # Run a Forth script from a file")
+        print("  North           # Start the REPL")
+        print("  North <file>    # Run a North script from a file")
 
 if __name__ == "__main__":
     main()
